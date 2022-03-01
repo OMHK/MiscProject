@@ -8,15 +8,13 @@ import random as r
 poollist = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's',
             't', 'u', 'v', 'w', 'x', 'y', 'z', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L',
             'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', '1', '2', '3', '4', '5',
-            '6', '7', '8', '9', '0']
+            '6', '7', '8', '9', '0','@','!','#','$','%','^','&','*','(',')','-','=','+','?','<','>']
 password = ''
 value = 0
 d = 0
 leng = 0
 thevers = []
 z = True
-c = 0
-b = 0
 
 def generator(lang):
     global password
@@ -24,7 +22,7 @@ def generator(lang):
     c = 0
     b = 0
     for c in range(lang):
-        value = r.randint(0, 61)
+        value = r.randint(0, 77)
         thevers.append(value)
     for b in range(lang):
         password = password + poollist[thevers[b]]
