@@ -5,6 +5,7 @@ you can specify the length of the password
 
 import random as r
 import re
+import pyperclip as pyc
 
 poollist = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's',
             't', 'u', 'v', 'w', 'x', 'y', 'z', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L',
@@ -44,7 +45,7 @@ your_email = input()
 isvalid(your_email)
 
 while z:
-    print('Please chose a length:')
+    print('Please chose a length: (more than 16 characters is recommended)')
     leng = input()
     if leng.isdecimal():
         leng = int(leng)
@@ -54,5 +55,7 @@ while z:
 print('Your new password is')
 generator(leng)
 print(password)
+pyc.copy(password)
 print('please memorise your new password')
+print('The password has been copied to your clipboard')
 print('Thank you for trying this code')
